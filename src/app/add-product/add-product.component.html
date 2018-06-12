@@ -1,0 +1,11 @@
+<table cellpadding="2" width="320px">
+  <tr>
+    <td class="right"><label>Name: <input type="text" [(ngModel)]="name"></label></td>
+   </tr>
+   <tr>
+    <td class="right"><label>Price: <input type="text" [(ngModel)]="price"></label></td>
+  </tr>
+  <tr>
+   <td class="right"><button (click)="this.add.emit([name, price]); this.clear()">Add</button></td>
+  </tr>
+</table>

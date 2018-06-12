@@ -1,0 +1,15 @@
+.name {
+    color: orange;
+    width: 180px;
+    text-align: left;
+    font-size: 20pt;
+}
+.price {
+    color: blue;
+    width: 120px;
+    text-align: right;
+    font-size: 20pt;
+}
+.underline {
+    border-bottom: 1pt solid black;
+}

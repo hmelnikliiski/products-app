@@ -1,0 +1,8 @@
+<app-add-product (add)="add($event)"></app-add-product>
+<br/>
+<br/>
+<table cellpadding="10" width="420px">
+  <tr *ngFor="let product of products">
+    <app-product [name]="product.name" [price]="product.price" (remove)="remove($event)"></app-product>
+  </tr>
+</table>
