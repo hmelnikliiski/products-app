@@ -20,7 +20,6 @@ import { ProductsService } from './shared/products.service';
     BrowserModule,
     FormsModule
   ],
-  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
