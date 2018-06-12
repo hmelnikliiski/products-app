@@ -1,0 +1,11 @@
+<table cellpadding="2" width="320px">
+    <tr>
+      <td class="right"><label>Name: <input type="text" [(ngModel)]="uname" readonly="true" #pname></label></td>
+     </tr>
+     <tr>
+      <td class="right"><label>Price: <input type="text" [(ngModel)]="uprice" #pprice></label></td>
+    </tr>
+    <tr>
+     <td class="right"><button (click)="updateProduct(pname.value, pprice.value)">Update</button></td>
+    </tr>
+  </table>
