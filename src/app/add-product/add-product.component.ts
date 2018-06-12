@@ -1,23 +1,29 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { ProductsService } from '../shared/products.service';
 
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
   styleUrls: ['./add-product.component.css']
 })
-export class AddProductComponent implements OnInit {
+export class AddProductComponent {
 
-  name;
-  price;
-  @Output() add = new EventEmitter();
+  private name:string;
+  private price:number;
 
-  constructor() { }
+  constructor(private _productsService: ProductsService) {
+  }
 
-  ngOnInit() {
+  addProduct(name:string, price:number) {
+    this._productsService.addProduct({
+      "name": name,
+      "price": price
+    });
   }
 
   clear() {
-    this.name = '';
-    this.price = '';
+    this.name = null;
+    this.price = null;
   }
 }
