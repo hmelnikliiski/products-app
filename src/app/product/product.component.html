@@ -1,3 +1,8 @@
 <td class="underline name">{{name}}</td>
 <td class="underline price">{{price}} BGN</td>
 <td class="underline"><button (click)="removeProduct()">Remove</button></td>
+<td class="underline"><button (click)="updateProduct()">Edit</button></td>
+<td *ngIf="update">
+        <app-update-product [uname]="name" [uprice]="price"></app-update-product>
+</td>
+

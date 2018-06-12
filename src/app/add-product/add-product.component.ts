@@ -9,13 +9,13 @@ import { ProductsService } from '../shared/products.service';
 })
 export class AddProductComponent {
 
-  private name:string;
-  private price:number;
+  name: string;
+  price: number;
 
   constructor(private _productsService: ProductsService) {
   }
 
-  addProduct(name:string, price:number) {
+  addProduct(name: string, price: number) {
     this._productsService.addProduct({
       "name": name,
       "price": price

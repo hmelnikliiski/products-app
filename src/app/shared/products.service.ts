@@ -4,8 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ProductsService {
-  
-  private products:any[] = [
+
+  private products: any[] = [
     {
       "name": "apples",
       "price": 2.50
@@ -20,7 +20,7 @@ export class ProductsService {
     }
   ];
 
-  constructor() { 
+  constructor() {
   }
 
   getProducts() {
@@ -31,26 +31,11 @@ export class ProductsService {
     this.products.push(product);
   }
 
-  editProduct(name:string, price:number) {
-    for(let product of this.products) {
-      if (product.name === name) {
-        product.price = price;
-        break;
-      }
-    }
+  updateProduct(name: string, price: number) {
+    this.products = this.products.map(product => product.name !== name ? product : { "name": product.name, "price": price });
   }
 
-  removeProduct(name:string) {
+  removeProduct(name: string) {
     this.products = this.products.filter(product => product.name !== name);
-    /*
-    let i=0;
-    for(let product of this.products) {
-      if (product.name === name) {
-        this.products.splice(i, 1);
-        break;
-      }
-      i++;
-    }
-    */
   }
 }
