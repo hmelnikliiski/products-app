@@ -8,18 +8,23 @@ export class ProductsService {
   private products: any[] = [
     {
       "id": 1,
-      "name": "apples",
-      "price": 2.50
+      "name": "Apples",
+      "price": 2.40
     },
     {
       "id": 2,
-      "name": "oranges",
-      "price": 1.80
+      "name": "Oranges",
+      "price": 1.20
     },
     {
       "id": 3,
-      "name": "bananas",
-      "price": 2.00
+      "name": "Bananas",
+      "price": 1.80
+    },
+    {
+      "id": 4,
+      "name": "Strawberries",
+      "price": 3.50
     }
   ];
 

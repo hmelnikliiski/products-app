@@ -1,19 +1,16 @@
-.id {
-    color: purple;
-    width: 20px;
-    text-align: left;
-    font-size: 20pt;
-}.name {
+.name {
     color: orange;
-    width: 180px;
+    width: 240px;
     text-align: left;
     font-size: 20pt;
+    white-space: nowrap;
 }
 .price {
     color: blue;
-    width: 120px;
+    width: 180px;
     text-align: right;
     font-size: 20pt;
+    white-space: nowrap;
 }
 .underline {
     border-bottom: 1pt solid black;
