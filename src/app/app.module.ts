@@ -7,8 +7,9 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
 import { AddProductComponent } from './add-product/add-product.component';
 
-import { ProductsService } from './shared/products.service';
 import { UpdateProductComponent } from './update-product/update-product.component';
+
+import { AppRoutingModule, routingComponents} from './routing/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UpdateProductComponent } from './update-product/update-product.componen
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   bootstrap: [AppComponent]
 })

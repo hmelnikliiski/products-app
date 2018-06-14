@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-
 import { ProductsService } from '../shared/products.service';
 
 @Component({

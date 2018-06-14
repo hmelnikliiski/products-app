@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { ProductsService } from '../shared/products.service';
 
 @Component({
@@ -21,9 +20,6 @@ export class AddProductComponent {
       "name": name,
       "price": price
     });
-  }
-
-  clear() {
     this.name = null;
     this.price = null;
   }
