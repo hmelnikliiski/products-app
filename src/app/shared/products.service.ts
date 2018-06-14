@@ -7,14 +7,17 @@ export class ProductsService {
 
   private products: any[] = [
     {
+      "id": 1,
       "name": "apples",
       "price": 2.50
     },
     {
+      "id": 2,
       "name": "oranges",
       "price": 1.80
     },
     {
+      "id": 3,
       "name": "bananas",
       "price": 2.00
     }
@@ -31,11 +34,11 @@ export class ProductsService {
     this.products.push(product);
   }
 
-  updateProduct(name: string, price: number) {
-    this.products = this.products.map(product => product.name !== name ? product : { "name": product.name, "price": price });
+  updateProduct(id: number, name: string, price: number) {
+    this.products = this.products.map(product => product.id !== id ? product : { "id": product.id, "name": name, "price": price });
   }
 
-  removeProduct(name: string) {
-    this.products = this.products.filter(product => product.name !== name);
+  removeProduct(id: number) {
+    this.products = this.products.filter(product => product.id !== id);
   }
 }

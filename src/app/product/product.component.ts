@@ -9,18 +9,19 @@ import { ProductsService } from '../shared/products.service';
 })
 export class ProductComponent {
 
+  @Input() id: number;
   @Input() name: string;
   @Input() price: number;
-  update = false;
+  show = false;
 
   constructor(private _productsService: ProductsService) {
   }
 
   removeProduct() {
-    this._productsService.removeProduct(this.name);
+    this._productsService.removeProduct(this.id);
   }
 
-  updateProduct() {
-    this.update = !this.update;
+  showHideForm() {
+    this.show = !this.show;
   }
 }

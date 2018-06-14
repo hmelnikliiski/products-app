@@ -1,4 +1,9 @@
-.name {
+.id {
+    color: purple;
+    width: 20px;
+    text-align: left;
+    font-size: 20pt;
+}.name {
     color: orange;
     width: 180px;
     text-align: left;

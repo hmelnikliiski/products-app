@@ -17,6 +17,7 @@ export class AddProductComponent {
 
   addProduct(name: string, price: number) {
     this._productsService.addProduct({
+      "id": Math.floor(Math.random() * 100000) + 1, // Possible collision!!!
       "name": name,
       "price": price
     });

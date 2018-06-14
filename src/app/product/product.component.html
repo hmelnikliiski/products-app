@@ -1,8 +1,11 @@
-<td class="underline name">{{name}}</td>
-<td class="underline price">{{price}} BGN</td>
-<td class="underline"><button (click)="removeProduct()">Remove</button></td>
-<td class="underline"><button (click)="updateProduct()">Edit</button></td>
-<td *ngIf="update">
-        <app-update-product [uname]="name" [uprice]="price"></app-update-product>
+<td class="underline name" title="Id={{id}}">{{name}}</td>
+<td class="underline price" title="Id={{id}}">{{price}} BGN</td>
+<td class="underline">
+        <button (click)="removeProduct()">Remove</button>
 </td>
-
+<td class="underline">
+        <button (click)="showHideForm()">Update</button>
+</td>
+<td class="underline">
+        <app-update-product *ngIf="show" [uid]="id" [uname]="name" [uprice]="price"></app-update-product>
+</td>

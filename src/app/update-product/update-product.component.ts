@@ -9,6 +9,7 @@ import { ProductsService } from '../shared/products.service';
 })
 export class UpdateProductComponent {
 
+  @Input() uid: number;
   @Input() uname: string;
   @Input() uprice: number;
 
@@ -16,6 +17,6 @@ export class UpdateProductComponent {
   }
 
   updateProduct(name: string, price: number) {
-    this._productsService.updateProduct(name, price);
+    this._productsService.updateProduct(this.uid, name, price);
   }
 }

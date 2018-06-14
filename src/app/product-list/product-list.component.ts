@@ -9,10 +9,16 @@ import { ProductsService } from '../shared/products.service';
 })
 export class ProductListComponent {
 
+  show = false;
+
   constructor(private _productsService: ProductsService) {
   }
 
   getProducts() {
     return this._productsService.getProducts();
+  }
+
+  showHideForm() {
+    this.show = !this.show;
   }
 }

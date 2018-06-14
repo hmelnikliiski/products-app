@@ -1,8 +1,9 @@
-<app-add-product></app-add-product>
+<button (click)="showHideForm()">Add Product</button>
 <br/>
 <br/>
-<table cellpadding="10" width="820px">
+<app-add-product *ngIf="show"></app-add-product>
+<table cellpadding="10">
   <tr *ngFor="let product of getProducts()">
-    <app-product [name]="product.name" [price]="product.price"></app-product>
+    <app-product [id]="product.id" [name]="product.name" [price]="product.price"></app-product>
   </tr>
 </table>
