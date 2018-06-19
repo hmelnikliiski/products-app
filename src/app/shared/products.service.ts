@@ -7,17 +7,17 @@ import { Observable } from 'rxjs';
 })
 export class ProductsService {
 
-  private products;
+  private products: any[];
 
   private productsURL = 'https://raw.githubusercontent.com/hmelnikliiski/products-app/master/src/app/shared/products.ini';
 
-  constructor(private http: HttpClient) {
+  constructor(private _http: HttpClient) {
     this.initProducts()
       .subscribe(data => this.products = data)
   }
 
   initProducts(): Observable<IProduct[]> {
-    return this.http.get<IProduct[]>(this.productsURL);
+    return this._http.get<IProduct[]>(this.productsURL);
   }
 
   getProducts() {
