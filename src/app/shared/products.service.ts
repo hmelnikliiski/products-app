@@ -1,34 +1,17 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
 
-  private products: any[] = [
-    {
-      "id": 1,
-      "name": "Apples",
-      "price": 2.40
-    },
-    {
-      "id": 2,
-      "name": "Oranges",
-      "price": 1.20
-    },
-    {
-      "id": 3,
-      "name": "Bananas",
-      "price": 1.80
-    },
-    {
-      "id": 4,
-      "name": "Strawberries",
-      "price": 3.50
-    }
-  ];
+  private products;
 
-  constructor() {
+  productsURL = 'https://raw.githubusercontent.com/ProgressBG-WWW-Courses/BKA-Angular-Code/RequestsAndObsevables/RequestsAndObsevables/src/assets/data/books.json';
+
+  constructor(private http: HttpClient) {
+    this.products = this.http.get(this.productsURL)
   }
 
   getProducts() {

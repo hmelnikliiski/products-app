@@ -11,6 +11,8 @@ import { UpdateProductComponent } from './update-product/update-product.componen
 
 import { AppRoutingModule, routingComponents} from './routing/app-routing.module';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { AppRoutingModule, routingComponents} from './routing/app-routing.module
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   bootstrap: [AppComponent]
 })
