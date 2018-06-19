@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +9,15 @@ export class ProductsService {
 
   private products;
 
-  productsURL = 'https://raw.githubusercontent.com/ProgressBG-WWW-Courses/BKA-Angular-Code/RequestsAndObsevables/RequestsAndObsevables/src/assets/data/books.json';
+  private productsURL = 'https://raw.githubusercontent.com/hmelnikliiski/products-app/master/src/app/shared/products.ini';
 
   constructor(private http: HttpClient) {
-    this.products = this.http.get(this.productsURL)
+    this.initProducts()
+      .subscribe(data => this.products = data)
+  }
+
+  initProducts(): Observable<IProduct[]> {
+    return this.http.get<IProduct[]>(this.productsURL);
   }
 
   getProducts() {
@@ -29,4 +35,10 @@ export class ProductsService {
   removeProduct(id: number) {
     this.products = this.products.filter(product => product.id !== id);
   }
+}
+
+export interface IProduct {
+  id: number,
+  name: string,
+  value: number
 }

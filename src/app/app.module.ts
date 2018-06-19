@@ -9,7 +9,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 
 import { UpdateProductComponent } from './update-product/update-product.component';
 
-import { AppRoutingModule, routingComponents} from './routing/app-routing.module';
+import { AppRoutingModule, routingComponents } from './routing/app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
 
