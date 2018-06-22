@@ -1,8 +1,10 @@
-<td class="underline name" title="Id={{id}}">{{name}}</td>
-<td class="underline price" title="Id={{id}}">{{price | number: '1.2-2'}} лв.</td>
-<td class="underline">
-        <a routerLink="product/{{id}}/{{name}}/{{price}}"><button>Update</button></a>
+<td class="col-md-2 name" title="Id={{id}}">{{name}}</td>
+<td class="col-md-2 price" title="Id={{id}}">{{price | number: '1.2-2'}} лв.</td>
+<td class="col-md-1">
+        <a routerLink="product/{{id}}/{{name}}/{{price}}">
+                <button class="btn btn-primary">Update</button>
+        </a>
 </td>
-<td class="underline">
-        <button (click)="removeProduct()">Remove</button>
+<td class="col-md-1">
+        <button (click)="removeProduct()" class="btn btn-danger">Remove</button>
 </td>

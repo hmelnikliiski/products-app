@@ -1,21 +1,11 @@
-<table cellpadding="2">
-  <tr>
-    <td class="right">
-      <label>Name:
-        <input type="text" [(ngModel)]="name" #pname>
-      </label>
-    </td>
-  </tr>
-  <tr>
-    <td class="right">
-      <label>Price:
-        <input type="text" [(ngModel)]="price" #pprice>
-      </label>
-    </td>
-  </tr>
-  <tr>
-    <td class="right">
-      <button (click)="addProduct(pname.value, pprice.value)">Submit</button>
-    </td>
-  </tr>
-</table>
+<div class="col-sm-10">
+  <div class="form-group col-md-2">
+    <input type="text" [(ngModel)]="name" class="form-control" placeholder="Name" #pname>
+  </div>
+  <div class="form-group col-md-2">
+    <input type="text" [(ngModel)]="price" class="form-control" placeholder="Price" #pprice>
+  </div>
+  <div class="form-group col-md-2">
+    <button (click)="addProduct(pname.value, pprice.value)" class="btn btn-success">Submit</button>
+  </div>
+</div>

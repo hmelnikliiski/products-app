@@ -1,12 +1,14 @@
-<button (click)="showHideForm()">Add Product</button>
+<button (click)="showHideForm()" class="btn btn-link">Add Product</button>
 <br/>
 <br/>
 <app-add-product *ngIf="show"></app-add-product>
-<table cellpadding="10">
-  <tr *ngFor="let product of getProducts()">
-    <app-product [id]="product.id" [name]="product.name" [price]="product.price"></app-product>
-  </tr>
-</table>
 <br/>
+<div class="col-md-6">
+  <table class="table table-striped">
+    <tr *ngFor="let product of getProducts()">
+      <app-product [id]="product.id" [name]="product.name" [price]="product.price"></app-product>
+    </tr>
+  </table>
+</div>
 <br/>
 <router-outlet></router-outlet>

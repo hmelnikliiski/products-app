@@ -1,17 +1,12 @@
 .name {
-    color: orange;
-    width: 240px;
+    color: darkblue;
     text-align: left;
-    font-size: 20pt;
+    font-size: 18pt;
     white-space: nowrap;
 }
 .price {
-    color: blue;
-    width: 180px;
+    color: darkorange;
     text-align: right;
-    font-size: 20pt;
+    font-size: 18pt;
     white-space: nowrap;
-}
-.underline {
-    border-bottom: 1pt solid black;
 }
