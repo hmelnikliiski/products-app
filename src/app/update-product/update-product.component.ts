@@ -30,4 +30,8 @@ export class UpdateProductComponent implements OnInit {
     this._productsService.updateProduct(this.id, name, price);
     this._router.navigate(['/']);
   }
+
+  cancel() {
+    this._router.navigate(['/']);
+  }
 }
